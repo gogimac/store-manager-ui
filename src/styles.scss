@@ -1,0 +1,124 @@
+/* General body styling */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333;
+  background-color: #f4f6f9;
+}
+
+/* Header styling */
+h1, .store-manager-section {
+  color: #3f51b5; /* Indigo color for titles */
+  font-weight: bold;
+}
+
+/* Sidebar styling */
+.sidebar {
+  background-color: #3f51b5; /* Indigo */
+  color: white;
+  padding: 10px;
+  min-width: 200px;
+}
+
+.sidebar h2 {
+  font-size: 20px;
+  color: #ffffff;
+}
+
+/* Tab styling */
+::ng-deep .mat-tab-group {
+  background-color: #ffffff; /* White background */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+::ng-deep .mat-tab-label {
+  color: #3f51b5; /* Indigo color for unselected tabs */
+  font-weight: bold;
+}
+
+::ng-deep .mat-tab-label-active {
+  color: #ff9800; /* Orange color for active tab */
+}
+
+/* Search box styling */
+.mat-form-field {
+  width: 100%;
+  margin: 20px 0;
+}
+
+.mat-form-field-appearance-outline .mat-form-field-outline {
+  border-color: #3f51b5;
+}
+
+.mat-form-field-appearance-outline .mat-form-field-outline.mat-focused .mat-form-field-outline-thick {
+  border-color: #ff9800;
+}
+
+.mat-icon {
+  color: #3f51b5; /* Icon color */
+}
+
+/* Table styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th {
+  background-color: #3f51b5; /* Indigo color for table headers */
+  color: white;
+  padding: 12px;
+  text-align: left;
+  font-weight: bold;
+}
+
+td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+tr:hover {
+  background-color: #f1f1f1; /* Light hover effect for table rows */
+}
+
+/* Paginator styling */
+::ng-deep .mat-paginator {
+  color: #3f51b5;
+  background: #ffffff;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Button styling */
+button {
+  background-color: #ff9800;
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #e68900;
+}
+
+/* Styling for the fixed ING logo in the bottom left */
+.lion-logo {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  width: 80px; /* Adjust size */
+  opacity: 0.9;
+  z-index: 10;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}

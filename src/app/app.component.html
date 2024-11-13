@@ -1,0 +1,31 @@
+<div class="page-container">
+    <mat-toolbar color="primary">
+        <button mat-icon-button aria-label="Menu" (click)="sideNav.toggle()">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <span>Store Manager</span>
+    </mat-toolbar>
+    <mat-sidenav-container class="sidenav-container">
+        <mat-sidenav #sideNav [opened]="isMobileDevice ? false : true" [mode]="isMobileDevice ? 'over' : 'side'">
+            <div class="sidenav-content">
+                <mat-list role="list">
+                    <mat-divider></mat-divider>
+                    <div *ngFor="let item of navigation">
+                        <a mat-list-item [routerLink]="item.link" routerLinkActive="active" (click)="handleRouteChange()">
+                            <mat-icon aria-hidden="false">{{ item.icon }}</mat-icon>
+                            <span>{{ item.label }}</span>
+                        </a>
+                        <mat-divider></mat-divider>
+                    </div>
+                </mat-list>
+                <img src="assets/images/ING.png" alt="ING Logo" class="lion-logo">
+
+            </div>
+        </mat-sidenav>
+        <mat-sidenav-content>
+            <div class="content" [@routeAnimations]="o.isActivated && o.activatedRoute.routeConfig.data && o.activatedRoute.routeConfig.data.title">
+                <router-outlet #o="outlet"></router-outlet>
+            </div>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+</div>
